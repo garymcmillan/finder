@@ -1,0 +1,30 @@
+@import "~nouislider/distribute/nouislider.min.css";
+
+.slider {
+  margin: 10px 0!important;
+}
+.noUi-horizontal {
+  height: 5px;
+}
+.noUi-horizontal .noUi-handle {
+  width: 4px;
+  height: 17px;
+  top: -6px;
+}
+.noUi-handle:after, .noUi-handle:before {
+  display: none !important;
+}
+html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+  right: -2px;
+}
+.noUi-handle {
+  border: 1px solid $blue;
+  border-radius: 0;
+  background: $blue;
+  cursor: move;
+  cursor: ew-resize;
+  box-shadow: none;
+}
+.noUi-connect {
+  background: $blue;
+}

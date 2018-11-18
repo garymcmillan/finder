@@ -1,0 +1,90 @@
+{
+  "colour_filter": {
+    "name": "Which colour?",
+    "priority": "1",
+    "label": "Select colour",
+    "options": [
+      {
+        "label": "grey",
+        "value": "65",
+        "colour_swatch_img": "https://media-houseologydesign.netdna-ssl.com/colour_filter_swatches/grey.png"
+      },
+      {
+        "label": "silver",
+        "value": "71",
+        "colour_swatch_img": "https://media-houseologydesign.netdna-ssl.com/colour_filter_swatches/silver.png"
+      },
+      {
+        "label": "brown",
+        "value": "64",
+        "colour_swatch_img": "https://media-houseologydesign.netdna-ssl.com/colour_filter_swatches/brown.png"
+      },
+      {
+        "label": "black",
+        "value": "70",
+        "colour_swatch_img": "https://media-houseologydesign.netdna-ssl.com/colour_filter_swatches/black.png"
+      }
+    ]
+  },
+  "style": {
+    "name": "Which style?",
+    "priority": "2",
+    "label": "Select style",
+    "options": [
+      {
+        "label": "luxe",
+        "value": "7645"
+      },
+      {
+        "label": "french",
+        "value": "7647"
+      }
+    ]
+  },
+  "material": {
+    "name": "Which material?",
+    "priority": "3",
+    "label": "Select material",
+    "options": [
+      {
+        "label": "fabric",
+        "value": "2587"
+      },
+      {
+        "label": "mixed",
+        "value": "60"
+      },
+      {
+        "label": "satin",
+        "value": "2626"
+      },
+      {
+        "label": "wood",
+        "value": "25"
+      }
+    ]
+  },
+  "brand_model_id": {
+    "name": "Which brand?",
+    "priority": "4",
+    "label": "Select brand",
+    "options": [
+      {
+        "label": "Eichholtz",
+        "value": "49"
+      },
+      {
+        "label": "OH-Maison",
+        "value": "124"
+      },
+      {
+        "label": "RV Astley",
+        "value": "307"
+      }
+    ]
+  },
+  "count": 6,
+  "min_price": 300,
+  "max_price": 800,
+  "increment": 100
+}

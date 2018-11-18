@@ -1,0 +1,101 @@
+{
+  "189": {
+    "catid": "12",
+    "name": "Ottomans",
+    "level": "2",
+    "categoryid": "189",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/bedroom-furniture/ottomans"
+  },
+  "708": {
+    "catid": "10",
+    "name": "Office Chairs",
+    "level": "2",
+    "categoryid": "708",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/office-chairs"
+  },
+  "1048": {
+    "catid": "2",
+    "name": "Sofas",
+    "level": "2",
+    "categoryid": "1048",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/sofas"
+  },
+  "1049": {
+    "catid": "3",
+    "name": "Armchairs",
+    "level": "2",
+    "categoryid": "1049",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/armchairs"
+  },
+  "1050": {
+    "catid": "5",
+    "name": "Bean Bags",
+    "level": "2",
+    "categoryid": "1050",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/bean-bags"
+  },
+  "1051": {
+    "catid": "6",
+    "name": "Chaise Longues",
+    "level": "2",
+    "categoryid": "1051",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/chaise-lounges"
+  },
+  "1053": {
+    "catid": "11",
+    "name": "Footstools",
+    "level": "2",
+    "categoryid": "1053",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/footstools"
+  },
+  "1068": {
+    "catid": "8",
+    "name": "Dining Benches",
+    "level": "2",
+    "categoryid": "1068",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/dining-benches"
+  },
+  "1069": {
+    "catid": "9",
+    "name": "Bar Stools",
+    "level": "2",
+    "categoryid": "1069",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/bar-stools"
+  },
+  "2510": {
+    "catid": "7",
+    "name": "Dining Chairs",
+    "level": "2",
+    "categoryid": "2510",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "brands/normann-copenhagen/normann-copenhagen-furniture/dining-chairs"
+  },
+  "3406": {
+    "catid": "4",
+    "name": "Accent Chairs",
+    "level": "2",
+    "categoryid": "3406",
+    "parentid": "1",
+    "groupid": "1",
+    "path": "designer-furniture/living-room/accent-chairs"
+  }
+}

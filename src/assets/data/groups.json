@@ -1,0 +1,228 @@
+{
+  "1": {
+    "groupid": "1",
+    "name": "Furniture",
+    "position": "1",
+    "categories": {
+      "1048": {
+        "catid": "1",
+        "name": "Sofas & Chairs",
+        "level": "1",
+        "categoryid": "1048",
+        "parentid": "0",
+        "groupid": "1",
+        "path": "http://x2.houseology.com/designer-furniture/sofas"
+      },
+      "2151": {
+        "catid": "21",
+        "name": "Cabinets & Storage",
+        "level": "1",
+        "categoryid": "2151",
+        "parentid": "0",
+        "groupid": "1",
+        "path": "http://x2.houseology.com/brands/xvl/cabinets"
+      },
+      "2480": {
+        "catid": "13",
+        "name": "Tables & Desks",
+        "level": "1",
+        "categoryid": "2480",
+        "parentid": "0",
+        "groupid": "1",
+        "path": "http://x2.houseology.com/brands/eichholtz/furniture/tables-and-desks"
+      },
+      "2482": {
+        "catid": "36",
+        "name": "Beds & Headboards",
+        "level": "1",
+        "categoryid": "2482",
+        "parentid": "0",
+        "groupid": "1",
+        "path": "http://x2.houseology.com/brands/eichholtz/furniture/beds"
+      }
+    }
+  },
+  "2": {
+    "groupid": "2",
+    "name": "Lighting",
+    "position": "1",
+    "categories": {
+      "1087": {
+        "catid": "40",
+        "name": "Table Lamps",
+        "level": "1",
+        "categoryid": "1087",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/lamps/table"
+      },
+      "1088": {
+        "catid": "43",
+        "name": "Desk Lamps",
+        "level": "1",
+        "categoryid": "1088",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/lamps/desk"
+      },
+      "1090": {
+        "catid": "51",
+        "name": "Lamp Shades",
+        "level": "1",
+        "categoryid": "1090",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/lamps/shades"
+      },
+      "1091": {
+        "catid": "44",
+        "name": "Lamp Bases",
+        "level": "1",
+        "categoryid": "1091",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/lamps/bases"
+      },
+      "1092": {
+        "catid": "45",
+        "name": "Ceiling Lights",
+        "level": "1",
+        "categoryid": "1092",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/ceiling-lights"
+      },
+      "1093": {
+        "catid": "46",
+        "name": "Pendant Lights",
+        "level": "1",
+        "categoryid": "1093",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/ceiling-lights/pendant-lights"
+      },
+      "1096": {
+        "catid": "47",
+        "name": "Wall Lights",
+        "level": "1",
+        "categoryid": "1096",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/wall-lights"
+      },
+      "1097": {
+        "catid": "49",
+        "name": "Picture Lights",
+        "level": "1",
+        "categoryid": "1097",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/wall-lights/picture"
+      },
+      "1098": {
+        "catid": "42",
+        "name": "Wall Lamps",
+        "level": "1",
+        "categoryid": "1098",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/wall-lights/lamps"
+      },
+      "1099": {
+        "catid": "48",
+        "name": "Bathroom Lights",
+        "level": "1",
+        "categoryid": "1099",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/bathroom"
+      },
+      "1246": {
+        "catid": "50",
+        "name": "Wall Sconces",
+        "level": "1",
+        "categoryid": "1246",
+        "parentid": "39",
+        "groupid": "2",
+        "path": "http://x2.houseology.com/designer-lighting/wall-lights/wall-sconces"
+      }
+    }
+  },
+  "3": {
+    "groupid": "3",
+    "name": "Accessories",
+    "position": "1",
+    "categories": {
+      "664": {
+        "catid": "52",
+        "name": "Cushions & Throws",
+        "level": "1",
+        "categoryid": "664",
+        "parentid": "0",
+        "groupid": "3",
+        "path": "http://x2.houseology.com/new/cushions-throws"
+      },
+      "719": {
+        "catid": "60",
+        "name": "Wallpaper",
+        "level": "1",
+        "categoryid": "719",
+        "parentid": "0",
+        "groupid": "3",
+        "path": "http://x2.houseology.com/designer-home-accessories/wallpaper"
+      },
+      "741": {
+        "catid": "67",
+        "name": "Wall Decor",
+        "level": "1",
+        "categoryid": "741",
+        "parentid": "0",
+        "groupid": "3",
+        "path": "http://x2.houseology.com/designer-home-accessories/wall-decor"
+      },
+      "748": {
+        "catid": "73",
+        "name": "Candles & Holders",
+        "level": "1",
+        "categoryid": "748",
+        "parentid": "0",
+        "groupid": "3",
+        "path": "http://x2.houseology.com/designer-home-accessories/candles-holders"
+      },
+      "1791": {
+        "catid": "55",
+        "name": "Rugs",
+        "level": "1",
+        "categoryid": "1791",
+        "parentid": "0",
+        "groupid": "3",
+        "path": "http://x2.houseology.com/brands/designers-guild/rugs"
+      }
+    }
+  },
+  "4": {
+    "groupid": "4",
+    "name": "Outdoor",
+    "position": "1",
+    "categories": {
+      "1103": {
+        "catid": "39",
+        "name": "Outdoor Lighting",
+        "level": "1",
+        "categoryid": "1103",
+        "parentid": "39",
+        "groupid": "4",
+        "path": "http://x2.houseology.com/designer-lighting/outdoor"
+      },
+      "1886": {
+        "catid": "74",
+        "name": "Furniture",
+        "level": "1",
+        "categoryid": "1886",
+        "parentid": "0",
+        "groupid": "4",
+        "path": "http://x2.houseology.com/brands/ethimo/outdoor-furniture"
+      }
+    }
+  }
+}

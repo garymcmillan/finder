@@ -1,0 +1,162 @@
+<div class="demo-banner">
+    <span>This is a demo version using dummy data</span>
+</div>
+<div id="productFinder">
+  <div id="leftPanel" class="background">
+    <div class="container">
+    <h3>Explore Products</h3>
+    <div *ngIf="!(navState | async).dataLoading">
+      <ul id="options">
+        <li
+        class="groupOption"
+        type="groups"
+        (click)="onGetGroups()">
+          <span>
+            {{ ((categoriesState | async).selectedCategory) &&
+            (categoriesState | async).selectedCategory.name ||
+            'Choose Category'}}
+          </span>
+          <span class="chevron down"></span>
+        </li>
+        <li
+        *ngIf="(categoriesState | async).selectedCategory"
+        class="groupOption"
+        type="categories"
+        level=""
+        parentid=""
+        (click)="goToSubCategories()">
+          <span>
+            {{ ((categoriesState | async).selectedSubCategories) &&
+            (categoriesState | async).selectedSubCategories.name ||
+            'Choose Category'}}
+          </span>
+          <span class="chevron down"></span>
+        </li>
+        <div *ngIf="isArray(attributes)">
+        <li
+        class="groupOption"
+        *ngFor = "let attribute of attributes; let i = index"
+        (click) = "selectAttributeGroup(attribute)"
+        [ngSwitch]="i"
+        id="{{ attribute.name }}">
+            <span *ngSwitchCase="0">
+              <span class="d-flex align-items-center" *ngIf="(navState | async).attribute0">
+                <span>{{ (navState | async).attribute0 }}</span>
+                <i (click)="removeAttribute(attribute)" class="material-icons mIcons">close</i>
+              </span>
+              <span *ngIf="!(navState | async).attribute0">
+                {{ attribute[1].name }}
+                <span class="chevron down"></span>
+              </span>
+            </span>
+            <span *ngSwitchCase="1">
+              <span class="d-flex align-items-center" *ngIf="(navState | async).attribute1">
+                {{ (navState | async).attribute1 }}
+                <i (click)="removeAttribute(attribute)" class="material-icons mIcons">close</i>
+              </span>
+              <span *ngIf="!(navState | async).attribute1">
+                {{ attribute[1].name }}
+                <span class="chevron down"></span>
+              </span>
+            </span>
+            <span *ngSwitchCase="2">
+               <span class="d-flex align-items-center" *ngIf="(navState | async).attribute2">
+                {{ (navState | async).attribute2 }}
+                <i (click)="removeAttribute(attribute)" class="material-icons mIcons">close</i>
+               </span>
+              <span *ngIf="!(navState | async).attribute2">
+                {{ attribute[1].name }}
+                <span class="chevron down"></span>
+              </span>
+            </span>
+        </li>
+        </div>
+      </ul>
+      <div class="bottom">
+        <div *ngIf="(attributeState | async).attributes">
+          <div class="slider-container" *ngIf="showSlider && someRange[0] !== someRange[1]">
+            <h4>Price Range</h4>
+            <nouislider
+                    [config] = "sliderConfig"
+                    [(ngModel)]="selectedRange"
+                    class="slider"
+                    #mySlider
+                    (change)="rangeChanged($event)"></nouislider>
+          </div>
+          <p class="small reset" (click)="reset()">Reset Now</p>
+          <p>{{ (attributeState | async).attributes.count }} Products available</p>
+        </div>
+      </div>
+      <button
+              class="btn btnPrimary"
+              *ngIf="(categoriesState | async).selectedCategory && (categoriesState | async).selectedSubCategories"
+              (click)="submit()">
+        Submit
+      </button>
+    </div>
+
+    <div [ngClass]="(navState | async).dataLoading ? 'spinner' : 'noSpinner'">
+      <ngx-spinner
+              bdColor="rgba(51,51,51,0.5)"
+              size="medium"
+              color="#fff"
+              type="ball-clip-rotate">
+      </ngx-spinner>
+    </div>
+  </div>
+  </div>
+
+  <div id="rightPanel" class="background" @rightPanelOpen *ngIf="!(navState | async).dataLoading && rightPanelOpen">
+    <div id="slideOutContent">
+      <div class="arrow-left"></div>
+      <app-groups></app-groups>
+      <app-category></app-category>
+      <app-attributes></app-attributes>
+      <!--<router-outlet></router-outlet>-->
+        <div id="results" *ngIf="(navState | async).finalChoices">
+            <p>The live version would redirect to a search results page for your chosen category with selected attributes</p>
+            <p>Your selected attributes</p>
+            <ul>
+                <li>
+                    Chosen Group:
+                    {{(navState | async).finalChoices.selectedGroup.name}}
+                </li>
+                <li>Chosen Category:
+                    {{(navState | async).finalChoices.selectedCategory.name}}
+                </li>
+                <li style="text-transform: capitalize">
+                    Chosen Attribute 1:
+                    {{(navState | async).attribute0}}
+                </li>
+                <li style="text-transform: capitalize">
+                    Chosen Attribute 2:
+                    {{(navState | async).attribute1}}
+                </li>
+                <li style="text-transform: capitalize">
+                    Chosen Attribute 3:
+                    {{(navState | async).attribute2}}
+                </li>
+                <li>
+                    Chosen Range:
+                    {{(navState | async).finalChoices.priceRange[0]}}
+                    -
+                    {{(navState | async).finalChoices.priceRange[1]}}
+                </li>
+            </ul>
+        </div>
+      <div
+              class="scroll-arrow--left hide chevron left"
+              (click)="scrollLeft()">
+
+      </div>
+      <div
+              class="scroll-arrow--right hide chevron right"
+              (click)="scrollRight()">
+
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #default>Choose Category</ng-template>
+<ng-template #catName>{{ (categoriesState | async).selectedCategory.name }}</ng-template>
+<ng-template #subCatName>{{ (categoriesState | async).selectedSubCategories.name }}</ng-template>

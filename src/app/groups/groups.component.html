@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row scrollable" *ngIf = "showMe && (groupsState | async).groups">
+        <div class="group column {{ group.name }}"
+        *ngFor = "let group of ((groupsState | async).groups | objectToArray) ; let i = index">
+            <h3>{{ group.name }}</h3>
+            <button class="btn btnPrimary see-less" (click)="seeLess(group.name)">
+                <span class="chevron up"></span>
+            </button>
+            <ul>
+                <li
+                *ngFor = "let category of (group.categories | objectToArray); let i = index"
+                (click)="onGetSubCategories(category)"
+                (mouseenter)="enter($event, category.name)"
+                (mouseleave)="leave()">
+                    {{ category.name | truncate:[17, '...']}}
+                </li>
+            </ul>
+            <button class="btn btnPrimary see-more" (click)="seeMore(group.name)" *ngIf="(group.categories | objectToArray).length > 7 ">
+                <span class="chevron down"></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="nav-label popover bs-popover-right"
+*ngIf="showMe && (labelState | async).label"
+[ngClass]="{ hidden:!(labelState | async).label }"
+[style.left.px]="(labelState | async).positionX"
+[style.top.px]="(labelState | async).positionY">
+    <div class="arrow"></div>
+    <div class="popover-body">
+        <p>{{ (labelState | async).label }}</p>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+.demo-banner {
+  positon: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+  color: #f3f3f3;
+  text-align: center;
+  padding: 7px;
+  z-index: 999999999999;
+}
+#productFinder {
+  margin: 0 0 0 96px;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+
+  #leftPanel {
+    text-align: center;
+    width: 240px;
+    height: 420px;
+    position: relative;
+    margin-right: 2px;
+    z-index: 999;
+    #options {
+      height: 230px;
+      width: 100%;
+      position: relative;
+      li {
+        &.groupOption {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        text-align: left;
+        padding: 7px;
+        background: #fff;
+        border: 1px solid #000;
+        margin: 0 0 15px;
+        border-radius: 5px;
+        &.inactive {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  #rightPanel {
+    flex-grow: 3;
+    height: 420px;
+    margin-left: 15px;
+    position: relative;
+
+    #slideOutContent {
+      height: 100%;
+    }
+  }
+  .bottom {
+    min-height: 104px;
+  }
+
+  .bottom p {
+    margin-bottom: 0;
+  }
+
+//.liDisabled {
+//  pointer-events: none;
+//  color: grey;
+//}
+}
+
+.reset {
+  cursor: pointer;
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.noSpinner {
+  display: none;
+}
+
+

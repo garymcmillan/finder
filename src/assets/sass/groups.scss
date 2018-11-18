@@ -1,0 +1,85 @@
+@import 'variables.scss';
+#slideOutContent {
+  .group {
+    padding: 0 15px;
+    position: relative;
+
+    +.group {
+      border-left: 1px solid #000;
+    }
+    ul {
+      height: 340px;
+      overflow: hidden;
+      li {
+        text-align: left;
+        padding: 7px;
+        background: #fff;
+        border: 1px solid #000;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    &:not(.column) {
+      ul {
+        columns: 3;
+        column-fill: auto;
+        height: 345px;
+        column-rule: 1px solid #000;
+        column-gap: 40px;
+      }
+    }
+  }
+
+  .see-less {
+    position: absolute;
+    width: calc(100% - 30px);
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: -1;
+    border: none;
+    border-radius: 0;
+    background: $grey_bg;
+
+    &.show {
+      opacity: 1;
+      transition: all 0.4s;
+      z-index: 1;
+    }
+
+    span.chevron {
+      position: relative;
+      &:before {
+        color: black;
+        border-width: 3px 3px 0 0;
+      }
+    }
+    &:active, &:focus {
+      outline: 0;
+    }
+  }
+
+  .see-more {
+    opacity: 1;
+    transition: all 0.4s;
+    background: $grey_bg;
+    border: none;
+
+    span.chevron {
+      position: relative;
+      &:before {
+        color: black;
+        border-width: 3px 3px 0 0;
+      }
+    }
+    &:active, &:focus {
+      outline: 0;
+    }
+    &.hide {
+      opacity: 0;
+      transition: all 0.4s;
+    }
+  }
+
+}

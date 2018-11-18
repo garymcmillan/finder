@@ -1,0 +1,22 @@
+.selectedOption {
+  background-color: #ccebff !important;
+}
+
+.colourImg {
+  border: #ccc 1px solid;
+  padding: 2px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.colourImg:hover {
+  border: #000 1px solid;
+}
+
+.imgUl {
+  display: inline;
+}
+
+.selectedColor {
+  border: #000 1px solid;
+}

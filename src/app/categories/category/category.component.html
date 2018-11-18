@@ -1,0 +1,23 @@
+<div class="group" *ngIf="showMe && (categoriesState | async).subCategories" >
+    <ul class="scrollable">
+        <li
+             *ngFor = "let category of ((categoriesState | async).subCategories | objectToArray); let i = index"
+             (click)= "onGetAttributes(category)"
+             (mouseenter)="enter($event, category.name)"
+             (mouseleave)="leave()">
+          {{ category.name | truncate:[17, '...']}}
+        </li>
+    </ul>
+</div>
+<div class="nav-label popover bs-popover-right"
+     *ngIf="showMe && (labelState | async).label"
+     [ngClass]="{ hidden:!(labelState | async).label }"
+     [style.left.px]="(labelState | async).positionX"
+     [style.top.px]="(labelState | async).positionY">
+    <div class="arrow"></div>
+    <div class="popover-body">
+        <p>{{ (labelState | async).label }}</p>
+    </div>
+</div>
+
+

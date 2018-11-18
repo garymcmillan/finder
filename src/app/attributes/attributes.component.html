@@ -1,0 +1,33 @@
+<div class="group" *ngIf="showMe && categoryAttributes">
+  <h3>{{ (attributeState | async).openAttribute.obj.label }}</h3>
+  <ul class="scrollable" *ngIf="(attributeState | async).openAttribute.name !== 'colour_filter'">
+  <li
+            *ngFor = "let option of categoryAttributes[openAttribute.name].options; let i = index;"
+            (click)="pushToSelectedOptions(option)"
+            [ngClass]="option.value === selectedOption ? 'selectedOption' : ''"
+            (mouseenter)="enter($event, option.label)"
+            (mouseleave)="leave()">
+      {{ option.label | truncate:[17, '...'] }}
+    </li>
+  </ul>
+
+  <ul class="imgUl" *ngIf="(attributeState | async).openAttribute.name === 'colour_filter'">
+    <img class="colourImg" *ngFor = "let option of (attributeState | async).openAttribute.obj.options; let i = index;"
+         (click)="pushToSelectedOptions(option)"
+         [ngClass]="option.value === selectedOption ? 'selectedColor' : ''"
+         (mouseenter)="enter($event, option.label)"
+         (mouseleave)="leave()"
+         [attr.src]=option.colour_swatch_img
+         width="30" height="30">
+  </ul>
+</div>
+<div class="nav-label popover bs-popover-right"
+     *ngIf="showMe && (labelState | async).label"
+     [ngClass]="{ hidden:!(labelState | async).label }"
+     [style.left.px]="(labelState | async).positionX"
+     [style.top.px]="(labelState | async).positionY">
+  <div class="arrow"></div>
+  <div class="popover-body">
+    <p>{{ (labelState | async).label }}</p>
+  </div>
+</div>
